@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CUP & CONE</title>
+    <link href="stylesheet.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Tauri&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        .main_heading {
+            font-family: Spartan, sans-serif;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        .navigation {
+            font-family: Arsenal, sans-serif;
+            font-size: 35px;
+            color: black;
+            text-align: center;
+            word-spacing: 60px;
+        }
+        .body {
+            font-family: Tauri, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .topnav_a {
+            float: left;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        a:link {
+            color: #8fcf6d;
+        }
+        a:active {
+            color: black;
+        }
+        a:hover {
+            color: #6c87cc;
+        }
+        a:after {
+            color: black;
+        }
+        .header {
+            background-color: #fcba03;
+            padding: 1px;
+            margin: auto;
+        }
+
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        .img {
+            vertical-align: middle;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #8fcf6d;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+<div class="main_heading">
+    <div class="header">
+        <h1>CUP
+            <img src="favicon-removebg-preview.png" alt="logo">
+            CONE
+        </h1>
+    </div>
+</div>
+
+
+    <div class="navbar">
+        <div class="navigation">
+            <div class="topnav_a"></div>
+        <a href="about.html">ABOUT</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+<div class="body">
+    <h2>LOCATION: 2126 4TH ST. WHITE BEAR LAKE, MN 55110</h2>
+</div>
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <div class="fade">
+            <div class="img">
+                <div class="numbertext">1 / 3</div>
+                <img src="image1.jpg" alt="icecream1" style="width:100%">
+            </div>
+    </div>
+    </div>
+
+    <div class="img">
+        <div class="fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="image2.jpg" alt="icecream2" style="width:100%">
+        </div>
+    </div>
+
+    <div class="img">
+        <div class="fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="image3.jpg" alt="icecream3" style="width:100%">
+        </div>
+    </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
+
+</body>
+</html>
